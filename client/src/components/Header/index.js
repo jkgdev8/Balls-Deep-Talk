@@ -11,12 +11,13 @@ const Header = () => {
     <header className="bg-secondary mb-4 py-2 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <Link to="/">
-          <h1>Deep Thoughts</h1>
+          <h1>Fantalk Sports</h1>
         </Link>
         <nav className="text-center">
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">Me</Link>
+              <Link to="/contact">Contact</Link>
               <a href="/" onClick={logout}>
                 Logout
               </a>

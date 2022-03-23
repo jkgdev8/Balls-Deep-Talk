@@ -6,6 +6,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -34,6 +35,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -43,6 +45,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/contact" component={Contact} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/thought/:id" component={SingleThought} />
