@@ -45,7 +45,7 @@ function Contact() {
 
   return (
     <div>
-      <p className="content is-medium">Contact Me</p>
+      <p className="content is-medium">Contact Us!</p>
       <hr />
       <form id="contact-form" onSubmit={handleSubmit}>
         <div className="field">
