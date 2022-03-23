@@ -1,5 +1,5 @@
 {
-  "name": "Balls-Deep-Talk",
+  "name": "Fantalk-Sports",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkgdev8/Balls-Deep-Talk"
+    "url": "git+https://github.com/jkgdev8/FanTalk-Sports"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jkgdev8/Balls-Deep-Talk/issues"
+    "url": "https://github.com/jkgdev8/FanTalk-Sports/issues"
   },
-  "homepage": "https://github.com/jkgdev8/Balls-Deep-Talk",
+  "homepage": "https://github.com/jkgdev8/FanTalk-Sports",
   "devDependencies": {
     "concurrently": "^7.0.0"
   }
