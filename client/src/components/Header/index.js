@@ -18,6 +18,7 @@ const Header = () => {
             <>
               <Link to="/profile">Me</Link>
               <Link to="/contact">Contact Us</Link>
+              <Link to="/dashboard">Dashboard</Link>
               <a href="/" onClick={logout}>
                 Logout
               </a>
