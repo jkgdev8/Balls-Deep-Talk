@@ -1,10 +1,10 @@
 :root {
   --primary: #497573;
-  --secondary: #99f7f2;
+  --secondary: #ffffff;
   --tertiary: #b2c2c1;
-  --quatrinary: #cadbda;
+  --quatrinary: #dbd0ca;
   --light: #e1f5f4;
-  --dark: #6c7575;
+  --dark: #747070;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -22,22 +22,33 @@ html,
 body {
   min-height: 100%;
 }
+.mainhead{
+  background-color:rgb(196, 196, 196);
+  opacity: 0.9;
 
+}
 body {
   margin: 0;
-  padding: 0;
+  padding: 110;
   font-family: 'Inconsolata', monospace;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.5;
-  font-size: 20px;
-  color: var(--dark);
-  background-color: #f3fffee1;
+  font-size: 40px;
+  color: black;
+  text-shadow: white 0px 0px 12px;
+  background-color: #1a1a1ae1;
 }
 .head{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  
+  align-items: right;
+  
+  
+  font-size: 40px;
+  color: black;
+  text-shadow: white 0px 0px 10px;
+
 }
+
 
 h1,
 h2,
@@ -253,6 +264,7 @@ nav a:hover {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 .container-fluid {
@@ -800,7 +812,14 @@ nav a:hover {
 }
 
 .bg-secondary {
-  background-color: var(--secondary);
+
+  background-image: url("./header.png");
+  image-resolution: from-image;
+  width: auto;
+  height: 170px;
+  opacity: 0.9;
+  border: 1px solid black;
+  
 }
 
 .bg-tertiary {

@@ -14,11 +14,10 @@ const Header = () => {
   ]
   return (
     <header className="bg-secondary mb-4 py-2 flex-row align-center">
+      
       <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <Link to="/">
-          <h1 className="head"> {img.map((index) => <img src={index.src} title={index.title} width="40" height="40" alt=""/>)}Fantalk Sports</h1>
-          
-        </Link>
+      <div className="mainhead"><Link to="/"><h1 className="head"> {img.map((index) => <img src={index.src} title={index.title} width="40" height="40" alt=""/>)}Fantalk Sports</h1>
+        </Link></div>
         <nav className="text-center">
           {Auth.loggedIn() ? (
             <>
