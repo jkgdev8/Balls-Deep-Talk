@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Modal from './modal.js';
+import { Link } from "react-router-dom";
 
 // import image from '../images/nba.jpg';
 
@@ -24,8 +25,11 @@ class Dashboard extends Component {
   
   render() {
     let img = [
-      {src:'./images/nba.jpg', title: 'nba'},
-      {src:'./images/nfl.jpg', title: 'nfl'}
+      {src:'./images/nba.jpg', title: '/nba'},
+      {src:'./images/nfl.jpg', title: '/nfl'},
+      {src:'./images/mlb.jpg', title: '/mlb'},
+      {src:'./images/mls.jpg', title: '/mls'},
+      {src:'./images/nhl.jpg', title: '/nhl'},
 
     ]
     return (
@@ -35,9 +39,7 @@ class Dashboard extends Component {
           <p>Leagues</p>
           <div className ="teams">
             
-              {img.map((index) => <img src={index.src} title={index.title} width="300" height="300" alt=""/>)}
-            
-            
+              {img.map((image, idx) => <Link to= {image.title}> <img src={image.src} title={image.title} width="300" height="300" alt=""/></Link>)}
           </div>
         </Modal>
         <button type="button" onClick={this.showModal}>

@@ -33,6 +33,11 @@ body {
   color: var(--dark);
   background-color: #f3fffee1;
 }
+.head{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 h1,
 h2,
