@@ -9,8 +9,6 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
-
-    
   },
   "repository": {
     "type": "git",
@@ -25,5 +23,9 @@
   "homepage": "https://github.com/jkgdev8/FanTalk-Sports",
   "devDependencies": {
     "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.1",
+    "react-image-picker": "^1.1.1"
   }
 }
