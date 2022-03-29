@@ -180,7 +180,7 @@ export const QUERY_MLS_THOUGHT = gql`
   }
 `;
 
-export const QUERY_MLS_THOUGHTS = gql`
+export const QUERY_NHL_THOUGHTS = gql`
   query nhlThoughts($username: String) {
     nhlThoughts(username: $username) {
       _id
