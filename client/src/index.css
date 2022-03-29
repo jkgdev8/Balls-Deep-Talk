@@ -1,10 +1,10 @@
 :root {
   --primary: #497573;
-  --secondary: #99f7f2;
+  --secondary: #ffbb00;
   --tertiary: #b2c2c1;
   --quatrinary: #cadbda;
-  --light: #e1f5f4;
-  --dark: #6c7575;
+  --light: #ffffff;
+  --dark: #000000;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -31,7 +31,13 @@ body {
   line-height: 1.5;
   font-size: 20px;
   color: var(--dark);
-  background-color: #f3fffee1;
+  background-color: #414242e1;
+}
+
+.mainhead{
+  background-color:rgb(196, 196, 196);
+  opacity: 0.9;
+
 }
 
 h1,
@@ -786,7 +792,13 @@ nav a:hover {
 }
 
 .bg-secondary {
-  background-color: var(--secondary);
+  background-image: url("./header.jpg");
+  image-resolution: from-image;
+  width: auto;
+  height: 190px;
+  opacity: 0.9;
+  border: 1px solid black;
+  border-radius:5px;
 }
 
 .bg-tertiary {

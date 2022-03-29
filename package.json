@@ -14,13 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkgdev8/FanTalk-Sports"
+    "url": "git+https://https://github.com/jkgdev8/FanTalk-Sports"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jkgdev8/FanTalk-Sports/issues"
+    "url": "https://https://github.com/jkgdev8/FanTalk-Sports/issues"
   },
   "homepage": "https://github.com/jkgdev8/FanTalk-Sports",
   "devDependencies": {

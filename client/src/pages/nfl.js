@@ -2,8 +2,8 @@ import React from 'react';
 import ThoughtList from '../components/ThoughtList';
 import Auth from '../utils/auth';
 import FriendList from '../components/FriendList';
+import ThoughtForm from '../components/ThoughtForm';
 
-import Dashboard from '../components/Dashboard';
 
 
 
@@ -25,15 +25,16 @@ const Home = () => {
       <div className="flex-row justify-space-between">
         {loggedIn && (
           <div className="col-12 mb-3">
-            <Dashboard/>
-            
+            <a href='/'><button>Go back</button></a>
+
+            <ThoughtForm />
           </div>
         )}
         <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ThoughtList thoughts={thoughts} title="League News" />
+            <ThoughtList thoughts={thoughts} title="League: NFL" />
           )}
         </div>
         {loggedIn && userData ? (

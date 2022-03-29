@@ -1,2 +1,0 @@
-# Fantalk Sports
-
