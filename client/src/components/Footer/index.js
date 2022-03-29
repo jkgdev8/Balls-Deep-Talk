@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="">
-      <div >
+    <footer>
+      <div className="container">
         &copy;{new Date().getFullYear()} by JDM Sports
       </div>
     </footer>

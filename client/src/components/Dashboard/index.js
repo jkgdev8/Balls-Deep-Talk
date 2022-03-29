@@ -39,7 +39,7 @@ class Dashboard extends Component {
           <p>Leagues</p>
           <div className ="teams">
             
-          {img.map((image, idx) => <Link  to= {image.title}> <img  src={image.src} title={image.title} width="250" height="200" alt=""/></Link>)}
+          {img.map((image, idx) => <Link  to= {image.title}> <img  src={image.src} title={image.title} width="230" height="150" alt=""/></Link>)}
           </div>
   
       </main>
