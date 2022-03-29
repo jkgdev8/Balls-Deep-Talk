@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Modal from './modal.js';
+
 import { Link } from "react-router-dom";
 
 // import image from '../images/nba.jpg';
