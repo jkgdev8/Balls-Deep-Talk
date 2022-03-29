@@ -1,10 +1,10 @@
 :root {
   --primary: #497573;
-  --secondary: #ffffff;
+  --secondary: #ffbb00;
   --tertiary: #b2c2c1;
-  --quatrinary: #dbd0ca;
-  --light: #e1f5f4;
-  --dark: #747070;
+  --quatrinary: #cadbda;
+  --light: #ffffff;
+  --dark: #000000;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -22,33 +22,23 @@ html,
 body {
   min-height: 100%;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 20px;
+  color: var(--dark);
+  background-color: #414242e1;
+}
+
 .mainhead{
   background-color:rgb(196, 196, 196);
   opacity: 0.9;
 
 }
-body {
-  margin: 0;
-  padding: 110;
-  font-family: 'Inconsolata', monospace;
-  font-weight: bold;
-  line-height: 1.5;
-  font-size: 40px;
-  color: black;
-  text-shadow: white 0px 0px 12px;
-  background-color: #1a1a1ae1;
-}
-.head{
-  
-  align-items: right;
-  
-  
-  font-size: 40px;
-  color: black;
-  text-shadow: white 0px 0px 10px;
-
-}
-
 
 h1,
 h2,
@@ -122,15 +112,6 @@ nav a:hover {
   margin: 0;
   font-size: 2.5rem;
 }
-.teams {
-  height: 300px;
-  width: 400px;
-  display: flex;
-}
-.teams:hover {
-  background-color: #e5e5e5;
-  text-decoration: none;
-  }
 
 .btn,
 .pill {
@@ -264,7 +245,6 @@ nav a:hover {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .container-fluid {
@@ -812,14 +792,13 @@ nav a:hover {
 }
 
 .bg-secondary {
-
-  background-image: url("./header.png");
+  background-image: url("./header.jpg");
   image-resolution: from-image;
   width: auto;
-  height: 170px;
+  height: 190px;
   opacity: 0.9;
   border: 1px solid black;
-  
+  border-radius:5px;
 }
 
 .bg-tertiary {

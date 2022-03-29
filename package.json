@@ -1,5 +1,5 @@
 {
-  "name": "Fantalk-Sports",
+  "name": "deep-thoughts",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -9,23 +9,21 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
+
+    
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkgdev8/FanTalk-Sports"
+    "url": "git+https://github.com/jkgdev8/deep-thoughts.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jkgdev8/FanTalk-Sports/issues"
+    "url": "https://github.com/jkgdev8/deep-thoughts/issues"
   },
-  "homepage": "https://github.com/jkgdev8/FanTalk-Sports",
+  "homepage": "https://github.com/jkgdev8/deep-thoughts#readme",
   "devDependencies": {
     "concurrently": "^7.0.0"
-  },
-  "dependencies": {
-    "inquirer": "^8.2.1",
-    "react-image-picker": "^1.1.1"
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-100 mt-auto  p-4">
+    <footer className="">
       <div >
         &copy;{new Date().getFullYear()} by JDM Sports
       </div>

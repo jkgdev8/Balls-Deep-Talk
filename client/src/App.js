@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink, } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import Contact from './components/Contact';
 
-import Dashboard from './components/Dashboard'
+
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Contact from './components/Contact';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -35,7 +35,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -44,7 +43,6 @@ function App() {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/contact" component={Contact} />
               <Route exact path="/signup" component={Signup} />

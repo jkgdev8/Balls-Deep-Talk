@@ -34,20 +34,14 @@ class Dashboard extends Component {
     ]
     return (
       <main>
-        <h1>Your Favorite League</h1>
-        <Modal show={this.state.show} handleClose={this.hideModal}>
+        <h1 className="choose">Choose League Room</h1>
+        
           <p>Leagues</p>
           <div className ="teams">
             
-              {img.map((image, idx) => <Link to= {image.title}> <img src={image.src} title={image.title} width="300" height="300" alt=""/></Link>)}
+          {img.map((image, idx) => <Link  to= {image.title}> <img  src={image.src} title={image.title} width="250" height="200" alt=""/></Link>)}
           </div>
-        </Modal>
-        <button type="button" onClick={this.showModal}>
-          Open
-        </button>
-        <div> 
-          
-            </div>
+  
       </main>
     );
   }
