@@ -2,19 +2,19 @@ import React from 'react';
 import ThoughtList from '../components/ThoughtList';
 import Auth from '../utils/auth';
 import FriendList from '../components/FriendList';
-import ThoughtForm from '../components/ThoughtForm';
+import NFL from '../components/nfl';
 
 
 
 
 
 import { useQuery } from '@apollo/client';
-import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
+import { QUERY_NFL_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 
 
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const { loading, data } = useQuery(QUERY_NFL_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
   const thoughts = data?.thoughts || [];
   const loggedIn = Auth.loggedIn();
@@ -26,8 +26,9 @@ const Home = () => {
         {loggedIn && (
           <div className="col-12 mb-3">
             <a href='/'><button>Go back</button></a>
+            <NFL/>
 
-            <ThoughtForm />
+            
           </div>
         )}
         <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
