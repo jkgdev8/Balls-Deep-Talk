@@ -805,13 +805,13 @@ nav a:hover {
 }
 
 .bg-secondary {
-  background-image: url("./header.jpg");
+  
   image-resolution: from-image;
   width: auto;
   height: 190px;
   opacity: 0.9;
   border: 1px solid black;
-  border-radius:5px;
+  border-radius:20px;
 }
 
 .bg-tertiary {

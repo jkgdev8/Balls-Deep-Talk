@@ -20,6 +20,7 @@ import NHL from './pages/nhl';
 
 
 
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
