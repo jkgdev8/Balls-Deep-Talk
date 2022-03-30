@@ -36,11 +36,11 @@ class Dashboard extends Component {
       <main>
         <h1 className="choose">Choose League Room</h1>
         
-          <p>Leagues</p>
-          <div className ="teams">
+          
+          <span className ="teams">
             
-          {img.map((image, idx) => <Link  to= {image.title}> <img  src={image.src} title={image.title} width="230" height="150" alt=""/></Link>)}
-          </div>
+          {img.map((image, idx) => <Link   to= {image.title}> <img className="imaging"  src={image.src} title={image.title} width="230" height="150" alt=""/></Link>)}
+          </span>
   
       </main>
     );

@@ -26,7 +26,7 @@ const Home = () => {
         {loggedIn && (
           <div className="col-12 mb-3">
             <a href='/'><button>Go back</button></a>
-
+              
             <NBA />
           </div>
         )}

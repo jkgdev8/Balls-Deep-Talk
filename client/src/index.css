@@ -37,8 +37,21 @@ body {
 .mainhead{
   background-color:rgb(196, 196, 196);
   opacity: 0.9;
-
+  transform: translateY(10px);
 }
+.icon {
+  transform: translateY(10px);
+}
+
+.imaging{
+  
+}
+
+.imaging:hover {
+  background-color:#ffbb00;
+  transform: scale(1.3);
+}
+
 
 h1,
 h2,
