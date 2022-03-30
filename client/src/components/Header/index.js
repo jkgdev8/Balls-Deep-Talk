@@ -18,22 +18,27 @@ const Header = () => {
     <>
       <Nav>
 
-        <NavLink to="/">
-        <div><Link to="/"><h1> {img.map((index) => <img className="icon" src={index.src} title={index.title} width="40" height="40" alt=""/>)}Fantalk Sports</h1></Link></div>
-        </NavLink>
+        
+        <NavLink to="/"><h1> {img.map((index) => <img className="icon" src={index.src} title={index.title} width="40" height="40" alt=""/>)}Fantalk Sports</h1></NavLink>
+        
 
-        <Bars />
+        <Bars to="/profile" activeStyle>Profile</Bars>
+        <Bars to="/contact" activeStyle>Contact Us</Bars>
+        
 
         <NavMenu>
+        
           <nav className="text-center">
           {Auth.loggedIn() ? (
             <>
               <NavLink to="/profile" activeStyle>Profile</NavLink>
               <NavLink to="/contact" activeStyle>Contact Us</NavLink>
               
+              
               <a href="/" onClick={logout}>
                 Logout
               </a>
+              
             </>
           ) : (
             <>
@@ -41,7 +46,7 @@ const Header = () => {
               <NavLink to="/signup" activeStyle>Signup</NavLink>
             </>
           )}
-        </nav>
+          </nav>
           
         </NavMenu>
 
