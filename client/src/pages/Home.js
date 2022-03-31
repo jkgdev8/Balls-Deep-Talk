@@ -2,7 +2,6 @@ import React from 'react';
 import ThoughtList from '../components/ThoughtList';
 import Auth from '../utils/auth';
 import FriendList from '../components/FriendList';
-
 import Dashboard from '../components/Dashboard';
 
 

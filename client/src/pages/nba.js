@@ -16,7 +16,7 @@ import { QUERY_NBA_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 const Home = () => {
   const { loading, data } = useQuery(QUERY_NBA_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || [];
+  const thoughts = data?.nbaThoughts || [];
   const loggedIn = Auth.loggedIn();
 
 
@@ -25,9 +25,8 @@ const Home = () => {
       <div className="flex-row justify-space-between">
         {loggedIn && (
           <div className="col-12 mb-3">
-            <a href='/'><button>Go back</button></a>
-              
-            <NBA />
+            <a href='/'><button>Go back</button></a>  
+            <NBA/>
           </div>
         )}
         <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>

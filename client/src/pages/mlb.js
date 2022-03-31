@@ -7,7 +7,6 @@ import MLB from '../components/mlb';
 
 
 
-
 import { useQuery } from '@apollo/client';
 import { QUERY_MLB_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_THOUGHT } from '../../utils/mutations';
+import { ADD_MLB_THOUGHT } from '../../utils/mutations';
 import { QUERY_MLB_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
 
 const ThoughtForm = () => {
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
+  const [addThought, { error }] = useMutation(ADD_MLB_THOUGHT, {
     update(cache, { data: { addThought } }) {
       try {
       // could potentially not exist yet, so wrap in a try...catch
