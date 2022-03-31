@@ -3,7 +3,7 @@
   --secondary: #ffbb00;
   --tertiary: #b2c2c1;
   --quatrinary: #cadbda;
-  --light: #ffffff;
+  --light: #ececec;
   --dark: #000000;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
@@ -50,8 +50,15 @@ body {
   line-height: 1.5;
   font-size: 20px;
   color: var(--dark);
-  background-color: #ffffffe1;
-}
+  background-color: #ebebebe1;
+  
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  }
 
 .fantalk{
   height: 100px;
@@ -176,6 +183,7 @@ nav a:hover {
   border-radius: var(--border-radius);
   background-color: var(--light);
   color: var(--dark);
+  font-weight: bold;
 }
 
 .card-header {
@@ -928,6 +936,9 @@ nav a:hover {
 .col-12 {
   flex: 0 0 100%;
   border-style: solid;
+  background-color: rgb(150, 150, 150);
+  opacity: 0.9;
+  text-align: ce;
 }
 
 /* col-sm */
