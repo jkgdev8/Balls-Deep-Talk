@@ -1,13 +1,10 @@
-// contact form with fields for
-// a name,
-// an email address, and
-// a message
-// WHEN I move my cursor out of one of the form fields without entering text THEN I receive a notification that this field is required
-// WHEN I enter text into the email address field THEN I receive a notification if I have entered an invalid email address
+
 
 import React, { useState } from 'react';
-
+import { FaBeer,FaGithub } from "react-icons/fa";
 import { validateEmail } from './helpers';
+
+
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -42,21 +39,22 @@ function Contact() {
       console.log('Handle Form', formState);
     }
   };
+  <FaBeer></FaBeer>
 
   return (
-    <div>
-      <p className="content is-medium">Contact Us!</p>
+    <div className="col-12">
+      <p >Contact Us!</p>
       <hr />
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div className="field">
+      <form  onSubmit={handleSubmit}>
+        <div>
           <label className="label" htmlFor="name">Name</label>
           <input className="input" type="text" name="name" defaultValue={name} onBlur={handleChange} />
         </div>
-        <div className="field">
+        <div>
           <label className="label" htmlFor="email">Email Address</label>
           <input className="input" type="email" name="email" defaultValue={email} onBlur={handleChange} />
         </div>
-        <div className="field">
+        <div>
           <label className="label" htmlFor="message">Message</label>
           <textarea className="textarea" name="message" rows="5" defaultValue={message} onBlur={handleChange} />
         </div>
@@ -68,6 +66,7 @@ function Contact() {
         <button className="button is-medium is-primary is-fullwidth" data-testid="button" type="submit">Submit</button>
       </form>
     </div>
+    
   );
 }
 

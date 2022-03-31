@@ -12,11 +12,11 @@ class Dashboard extends Component {
   
   render() {
   const images = [
-    {src:'./images/lebron.jpg', title: '/nba', tag: ('NBA - National Basketball Association')},
-    {src:'./images/mookie.jpg', title: '/mlb', tag: ('MLB - Major League Baseball')},
-    {src:'./images/aaron.jpg', title: '/nfl', tag: ('NFL - National Football League')},
-    {src:'./images/jake.jpg', title: '/nhl', tag: ('NHL - National Hockey League')},
-    {src:'./images/zlatan.jpg', title: '/mls', tag: ('MLS - Major League Soccer')}
+    {src:'./images/lebron.jpg', title: '/nba', tag: ('NBA - National Basketball Association 🏀')},
+    {src:'./images/mookie.jpg', title: '/mlb', tag: ('MLB - Major League Baseball ⚾️)') },
+    {src:'./images/aaron.jpg', title: '/nfl', tag: ('NFL - National Football League 🏈')},
+    {src:'./images/jake.jpg', title: '/nhl', tag: ('NHL - National Hockey League 🏑')},
+    {src:'./images/zlatan.jpg', title: '/mls', tag: ('MLS - Major League Soccer ⚽')}
   
     
   ]

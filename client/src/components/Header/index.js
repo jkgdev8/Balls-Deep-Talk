@@ -19,7 +19,7 @@ const Header = () => {
     <>
       <Nav>
         <NavLink to='/'>
-          <img src={h1} alt='logo' height='170px' width='170px' color='none'/>
+          <img src={h1} alt='logo' height='180px' width='300px' color='none'/>
         </NavLink>
         <Bars />
         <NavMenu>
@@ -28,7 +28,7 @@ const Header = () => {
               
               <NavLink to="/profile" activeStyle>Profile</NavLink>
               <NavLink to="/contact" activeStyle>Contact Us</NavLink>
-              <NavLink to="/contact" activeStyle>Leagues</NavLink>
+              
               {/* <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />; */}
               
 
