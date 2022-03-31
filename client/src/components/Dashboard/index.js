@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { Zoom } from 'react-slideshow-image';
+
+import 'react-slideshow-image/dist/styles.css';
 
 import { Link } from "react-router-dom";
 
@@ -6,45 +9,38 @@ import { Link } from "react-router-dom";
 
 
 class Dashboard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      show: false
-    };
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
-  }
-
-  showModal = () => {
-    this.setState({ show: true });
-  };
-
-  hideModal = () => {
-    this.setState({ show: false });
-  };
   
   render() {
-    let img = [
-      {src:'./images/nba.jpg', title: '/nba'},
-      {src:'./images/nfl.jpg', title: '/nfl'},
-      {src:'./images/mlb.jpg', title: '/mlb'},
-      {src:'./images/mls.jpg', title: '/mls'},
-      {src:'./images/nhl.jpg', title: '/nhl'},
-
-    ]
-    return (
-      <main>
-        <h1 className="choose">Choose League Room</h1>
-        
-          
-          <span className ="teams">
-            
-          {img.map((image, idx) => <Link   to= {image.title}> <img className="imaging"  src={image.src} title={image.title} width="230" height="150" alt=""/></Link>)}
-          </span>
+  const images = [
+    {src:'./images/lebron.jpg', title: '/nba', tag: ('NBA - National Basketball Association')},
+    {src:'./images/mookie.jpg', title: '/mlb', tag: ('MLB - Major League Baseball')},
+    {src:'./images/aaron.jpg', title: '/nfl', tag: ('NFL - National Football League')},
+    {src:'./images/jake.jpg', title: '/nhl', tag: ('NHL - National Hockey League')},
+    {src:'./images/zlatan.jpg', title: '/mls', tag: ('MLS - Major League Soccer')}
   
-      </main>
-    );
+    
+  ]
+  const zoomInProperties = {
+    indicators: true,
+    scale: 1.4
   }
+
+
+  return (
+    <div>
+      <Zoom {...zoomInProperties}>
+        {images.map((each, index) => (
+          <div key={index} style={{width: "auto" }}>
+           <Link   to={each.title}> <img className="mainimage" style={{ objectFit: "cover", width: "auto" }} src={each.src} title={each.title}  alt=""/></Link>
+           <Link to={each.title}> <p className="ptag">{each.tag} </p></Link>
+          </div>
+        ))}
+      </Zoom>
+    </div>
+  )
 }
+};
+
+
 
 export default Dashboard
