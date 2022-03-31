@@ -4,7 +4,7 @@ import Auth from '../utils/auth';
 import FriendList from '../components/FriendList';
 
 import Dashboard from '../components/Dashboard';
-
+import header from '../pages/header.jpg';
 
 
 import { useQuery } from '@apollo/client';

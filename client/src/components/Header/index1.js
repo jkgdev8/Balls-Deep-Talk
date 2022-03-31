@@ -17,13 +17,24 @@ const Header = () => {
   
   return (
     <>
+    
       <Nav>
-        <NavLink to='/'>
-          <img src={h1} alt='logo' height='170px' width='170px' color='none'/>
+
+
+        <NavLink to="/"><img src= {h1}  />
         </NavLink>
-        <Bars />
+       
+        
+        
+        
+        <Bars to="/profile" activeStyle>Profile</Bars>
+        <Bars to="/contact" activeStyle>Contact Us</Bars>
+        
+
         <NavMenu>
-        {Auth.loggedIn() ? (
+        
+          <nav >
+          {Auth.loggedIn() ? (
             <>
               
               <NavLink to="/profile" activeStyle>Profile</NavLink>
@@ -36,21 +47,23 @@ const Header = () => {
               
 
               
-              <NavBtn>
-              <NavBtnLink to='/logout' onClick={logout} >Log Out</NavBtnLink>
-              </NavBtn>
+              
+              <a href="/" onClick={logout}>
+                Logout
+              </a>
               
             </>
           ) : (
             <>
-              
+              <NavLink to="/login" activeStyle>Login</NavLink>
               <NavLink to="/signup" activeStyle>Signup</NavLink>
-              <NavBtn>
-              <NavBtnLink to='/login'>Log In</NavBtnLink>
-              </NavBtn>
             </>
           )}
+          </nav>
+          
         </NavMenu>
+
+        
         
       </Nav>
     </>

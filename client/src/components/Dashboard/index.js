@@ -30,9 +30,9 @@ class Dashboard extends Component {
     <div>
       <Zoom {...zoomInProperties}>
         {images.map((each, index) => (
-          <div key={index} style={{width: "100%"}}>
-           <Link   to={each.title}> <img className="mainimage" style={{ objectFit: "cover", width: "100%" }} src={each.src} title={each.title}  alt=""/></Link>
-           <p className="ptag">{each.tag}</p>
+          <div key={index} style={{width: "auto" }}>
+           <Link   to={each.title}> <img className="mainimage" style={{ objectFit: "cover", width: "auto" }} src={each.src} title={each.title}  alt=""/></Link>
+           <Link to={each.title}> <p className="ptag">{each.tag} </p></Link>
           </div>
         ))}
       </Zoom>
