@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_THOUGHT } from '../../utils/mutations';
+import { ADD_NBA_THOUGHT } from '../../utils/mutations';
 import { QUERY_NBA_THOUGHTS , QUERY_ME } from '../../utils/queries';
 
 
 const ThoughtForm = () => {
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
+  const [addThought, { error }] = useMutation(ADD_NBA_THOUGHT, {
     update(cache, { data: { addThought } }) {
       try {
       // could potentially not exist yet, so wrap in a try...catch
@@ -13,7 +13,7 @@ const ThoughtForm = () => {
       const { thoughts } = cache.readQuery({ query: QUERY_NBA_THOUGHTS  });
       cache.writeQuery({
         query: QUERY_NBA_THOUGHTS ,
-        data: { thoughts: [addThought, ...thoughts] }
+        data: { nbaThoughts: [addThought, ...thoughts] }
       });
     } catch (e) {
       console.error(e);
@@ -23,7 +23,7 @@ const ThoughtForm = () => {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, thoughts: [...me.thoughts, addThought] } }
+        data: { me: { ...me, nbaThoughts: [...me.nbaThoughts, addThought] } }
       });
     }
   });
@@ -41,7 +41,7 @@ const ThoughtForm = () => {
   const handleFormSubmit = async event => {
     event.preventDefault();
     try {
-      // add thought to a databased 
+      // add thought to a database
       await addThought ({
         variables: { thoughtText }
       });

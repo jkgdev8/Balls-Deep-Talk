@@ -26,6 +26,36 @@ const userSchema = new Schema(
         ref: 'Thought'
       }
     ],
+    mlbThoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'MlbThought'
+      }
+    ],
+    mlsThoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'MlsThought'
+      }
+    ],
+    nbaThoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'NbaThought'
+      }
+    ],
+    nflThoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'NflThought'
+      }
+    ],
+    nhlThoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'NhlThought'
+      }
+    ],
     friends: [
       {
         type: Schema.Types.ObjectId,

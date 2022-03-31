@@ -13,10 +13,10 @@ import { QUERY_MLB_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 
 
 
-const Home = () => {
+const MlbHome = () => {
   const { loading, data } = useQuery(QUERY_MLB_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || [];
+  const thoughts = data?.mlbThoughts || [];
   const loggedIn = Auth.loggedIn();
 
 
@@ -26,7 +26,7 @@ const Home = () => {
         {loggedIn && (
           <div className="col-12 mb-3">
             <a href='/'><button>Go back</button></a>
-
+              
             <MLB />
           </div>
         )}
@@ -49,6 +49,6 @@ const Home = () => {
       </div>
     </main>
   );
-};
+};  
 
-export default Home;
+export default MlbHome;
