@@ -2,6 +2,7 @@ import React from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './Nav';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
+import h1 from './h1.svg';
 
 
 const Header = () => {
@@ -19,7 +20,8 @@ const Header = () => {
       <Nav>
 
         
-        <NavLink to="/"><h1> {img.map((index) => <img className="icon" src={index.src} title={index.title} width="40" height="40" alt=""/>)}Fantalk Sports</h1></NavLink>
+        <NavLink to="/"><img className ="fantalk" src= {h1}  />
+        </NavLink>
         
 
         <Bars to="/profile" activeStyle>Profile</Bars>
@@ -28,7 +30,7 @@ const Header = () => {
 
         <NavMenu>
         
-          <nav className="text-center">
+          <nav >
           {Auth.loggedIn() ? (
             <>
               <NavLink to="/profile" activeStyle>Profile</NavLink>
