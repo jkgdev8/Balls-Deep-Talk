@@ -13,10 +13,10 @@ import { QUERY_NFL_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 
 
 
-const Home = () => {
+const NflHome = () => {
   const { loading, data } = useQuery(QUERY_NFL_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || [];
+  const thoughts = data?.nflThoughts || [];
   const loggedIn = Auth.loggedIn();
 
 
@@ -26,9 +26,8 @@ const Home = () => {
         {loggedIn && (
           <div className="col-12 mb-3">
             <a href='/'><button>Go back</button></a>
-            <NFL/>
-
-            
+              
+            <NFL />
           </div>
         )}
         <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
@@ -50,6 +49,6 @@ const Home = () => {
       </div>
     </main>
   );
-};
+};  
 
-export default Home;
+export default NflHome;

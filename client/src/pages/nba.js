@@ -13,10 +13,10 @@ import { QUERY_NBA_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 
 
 
-const Home = () => {
+const NbaHome = () => {
   const { loading, data } = useQuery(QUERY_NBA_THOUGHTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || [];
+  const thoughts = data?.nbaThoughts || [];
   const loggedIn = Auth.loggedIn();
 
 
@@ -51,4 +51,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default NbaHome;

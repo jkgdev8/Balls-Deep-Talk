@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_NFL_THOUGHTS, QUERY_ME } from '../../utils/queries';
+import { ADD_NFL_THOUGHT } from '../../utils/mutations';
+import { QUERY_NFL_THOUGHTS , QUERY_ME } from '../../utils/queries';
 
 
 const ThoughtForm = () => {
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
+  const [addThought, { error }] = useMutation(ADD_NFL_THOUGHT, {
     update(cache, { data: { addThought } }) {
       try {
       // could potentially not exist yet, so wrap in a try...catch
       // read what's currently in the cache
-      const { thoughts } = cache.readQuery({ query: QUERY_NFL_THOUGHTS });
+      const { thoughts } = cache.readQuery({ query: QUERY_NFL_THOUGHTS  });
       cache.writeQuery({
-        query: QUERY_NFL_THOUGHTS,
-        data: { thoughts: [addThought, ...thoughts] }
+        query: QUERY_NFL_THOUGHTS ,
+        data: { nflThoughts: [addThought, ...thoughts] }
       });
     } catch (e) {
       console.error(e);
@@ -23,7 +23,7 @@ const ThoughtForm = () => {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, thoughts: [...me.thoughts, addThought] } }
+        data: { me: { ...me, nflThoughts: [...me.nflThoughts, addThought] } }
       });
     }
   });
@@ -41,7 +41,7 @@ const ThoughtForm = () => {
   const handleFormSubmit = async event => {
     event.preventDefault();
     try {
-      // add thought to a databased 
+      // add thought to a database
       await addThought ({
         variables: { thoughtText }
       });
