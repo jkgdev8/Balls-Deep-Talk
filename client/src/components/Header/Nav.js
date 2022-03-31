@@ -1,11 +1,12 @@
 import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
+import img from './nav.svg';
+import h1 from './h1.svg';
 
 export const Nav = styled.nav`
   
   opacity: 0.9;
-  
   display: flex;
   font-weight: bold;
   justify-content: center;
