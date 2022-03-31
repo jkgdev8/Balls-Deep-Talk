@@ -32,6 +32,6 @@ thoughtNflSchema.virtual('reactionNflCount').get(function() {
   return this.reactions.length;
 });
 
-const NflThought = model('Thought', thoughtNflSchema);
+const NflThought = model('NflThought', thoughtNflSchema);
 
 module.exports = NflThought;

@@ -32,6 +32,6 @@ thoughtMlsSchema.virtual('reactionMlsCount').get(function() {
   return this.reactions.length;
 });
 
-const MlsThought = model('Thought', thoughtMlsSchema);
+const MlsThought = model('MlsThought', thoughtMlsSchema);
 
 module.exports = MlsThought;

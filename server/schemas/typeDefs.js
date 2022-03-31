@@ -7,7 +7,12 @@ const typeDefs = gql`
     email: String
     friendCount: Int
     thoughts: [Thought]
+    mlbThoughts: [MlbThought]
+    nbaThoughts: [NbaThought]
+    nflThoughts: [NflThought]
+    nhlThoughts: [NhlThought]
     friends: [User]
+    mlsThoughts: [MlsThought]
   }
 
   type Thought {
@@ -125,6 +130,7 @@ const typeDefs = gql`
     mlbThought(_id: ID!): MlbThought
     mlsThought(_id: ID!): MlsThought
     nbaThought(_id: ID!): NbaThought
+    nflThought(_id: ID!): NflThought
     nhlThought(_id: ID!): NhlThought
   }
 

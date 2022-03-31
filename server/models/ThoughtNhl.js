@@ -19,7 +19,7 @@ const thoughtNhlSchema = new Schema(
       type: String,
       required: true
     },
-    reactions: [reactionSchema]
+    reactions: [reactionNhlSchema]
   },
   {
     toJSON: {
@@ -32,6 +32,6 @@ thoughtNhlSchema.virtual('reactionNhlCount').get(function() {
   return this.reactions.length;
 });
 
-const NhlThought = model('Thought', thoughtNhlSchema);
+const NhlThought = model('NhlThought', thoughtNhlSchema);
 
 module.exports = NhlThought;

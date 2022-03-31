@@ -32,6 +32,6 @@ thoughtNbaSchema.virtual('reactionNbaCount').get(function() {
   return this.reactions.length;
 });
 
-const NbaThought = model('Thought', thoughtNbaSchema);
+const NbaThought = model('NbaThought', thoughtNbaSchema);
 
 module.exports = NbaThought;

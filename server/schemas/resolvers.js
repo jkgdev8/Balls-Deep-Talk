@@ -23,6 +23,11 @@ const resolvers = {
           })
           .select('-__v -password')
           .populate('thoughts')
+          .populate('mlbThoughts')
+          .populate('mlsThoughts')
+          .populate('nbaThoughts')
+          .populate('nflThoughts')
+          .populate('nhlThoughts')
           .populate('friends');
 
         return userData;
@@ -34,8 +39,14 @@ const resolvers = {
       return User.find()
         .select('-__v -password')
         .populate('thoughts')
+        .populate('mlbThoughts')
+        .populate('mlsThoughts')
+        .populate('nbaThoughts')
+        .populate('nflThoughts')
+        .populate('nhlThoughts')
         .populate('friends');
     },
+
     user: async (parent, {
       username
     }) => {
@@ -44,8 +55,14 @@ const resolvers = {
         })
         .select('-__v -password')
         .populate('friends')
-        .populate('thoughts');
+        .populate('thoughts')
+        .populate('mlbThoughts')
+        .populate('nbaThoughts')
+        .populate('nflThoughts')
+        .populate('nhlThoughts')
+        .populate('mlsThoughts')
     },
+
     thoughts: async (parent, {
       username
     }) => {
@@ -63,6 +80,7 @@ const resolvers = {
         _id
       });
     },
+
     mlbThoughts: async (parent, {
       username
     }) => {
@@ -73,6 +91,7 @@ const resolvers = {
         createdAt: -1
       });
     },
+
     mlbThought: async (parent, {
       _id
     }) => {
@@ -80,6 +99,7 @@ const resolvers = {
         _id
       });
     },
+
     mlsThoughts: async (parent, {
       username
     }) => {
@@ -90,6 +110,7 @@ const resolvers = {
         createdAt: -1
       });
     },
+
     mlsThought: async (parent, {
       _id
     }) => {
@@ -97,6 +118,7 @@ const resolvers = {
         _id
       });
     },
+
     nbaThoughts: async (parent, {
       username
     }) => {
@@ -217,7 +239,7 @@ const resolvers = {
           _id: context.user._id
         }, {
           $push: {
-            thoughts: mlbThought._id
+            mlbThoughts: mlbThought._id
           }
         }, {
           new: true
@@ -239,7 +261,7 @@ const resolvers = {
           _id: context.user._id
         }, {
           $push: {
-            thoughts: mlsThought._id
+            mlsThoughts: mlsThought._id
           }
         }, {
           new: true
@@ -259,7 +281,7 @@ const resolvers = {
           _id: context.user._id
         }, {
           $push: {
-            thoughts: nbaThought._id
+            nbaThoughts: nbaThought._id
           }
         }, {
           new: true
@@ -279,7 +301,7 @@ const resolvers = {
           _id: context.user._id
         }, {
           $push: {
-            thoughts: nflThought._id
+            nflThoughts: nflThought._id
           }
         }, {
           new: true
@@ -299,7 +321,7 @@ const resolvers = {
           _id: context.user._id
         }, {
           $push: {
-            thoughts: nhlThought._id
+            nhlThoughts: nhlThought._id
           }
         }, {
           new: true

@@ -32,6 +32,6 @@ thoughtMlbSchema.virtual('reactionMlbCount').get(function() {
   return this.reactions.length;
 });
 
-const MlbThought = model('Thought', thoughtMlbSchema);
+const MlbThought = model('MlbThought', thoughtMlbSchema);
 
 module.exports = MlbThought;
