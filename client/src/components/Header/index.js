@@ -1,6 +1,6 @@
 import React from 'react'
-import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './Nav';
-import { Link } from 'react-router-dom';
+import {Nav, NavLink, Bars, NavMenu} from './Nav';
+// import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 
 
