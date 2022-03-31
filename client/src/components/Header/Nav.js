@@ -9,6 +9,7 @@ export const Nav = styled.nav `
  justify-content: space-between;
  padding: 0.5 rem calc((100vw - 1000px) / 2);
  z-index: 10;
+ border-style: solid;
 `
 
 export const NavLink = styled(Link) `
@@ -45,6 +46,7 @@ export const NavMenu = styled.div`
  display: flex;
  align-items: center;
  margin-right: 100px;
+ font-weight: bold;
  
  @media screen and (max-width: 768px) {
      display: none;

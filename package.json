@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "react-icons": "^4.3.1",
+    "react-slideshow-image": "^3.7.0",
     "styled-components": "^5.3.5"
   }
 }

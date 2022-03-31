@@ -4,8 +4,7 @@ import Auth from '../utils/auth';
 import FriendList from '../components/FriendList';
 
 import Dashboard from '../components/Dashboard';
-import header from '../pages/header.jpg';
-import lebron from '../pages/lebron.jpg';
+
 
 
 import { useQuery } from '@apollo/client';
@@ -24,21 +23,20 @@ const Home = () => {
   return (
     <main>
       
-      <div className="flex-row justify-space-between">
+      <div>
       
         {loggedIn && (
-          <div>
-            <p><img src={lebron}/></p>
-            <Dashboard/>
+          
             
-            
-          </div>
+        <Dashboard/>
+          
+          
         )}
         <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ThoughtList thoughts={thoughts} title="League News" />
+            <ThoughtList thoughts={thoughts} title="League Posts" />
           )}
         </div>
         {loggedIn && userData ? (

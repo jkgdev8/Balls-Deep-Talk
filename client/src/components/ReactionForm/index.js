@@ -36,7 +36,7 @@ const ReactionForm = ({ thoughtId }) => {
       </p>
       <form className="flex-row justify-center justify-space-between-md align-stretch" onSubmit={handleFormSubmit}>
         <textarea
-          placeholder="Here's a new thought..."
+          placeholder="create a post..."
           value={reactionBody}
           className="form-input col-12 col-md-9"
           onChange={handleChange}
