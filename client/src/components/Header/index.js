@@ -29,6 +29,15 @@ const Header = () => {
               
               <NavLink to="/profile" activeStyle>Profile</NavLink>
               <NavLink to="/contact" activeStyle>Contact Us</NavLink>
+              <div class="search-container">
+                <input type="text" name="search" placeholder="Search..." class="search-input"/>
+                <a href="#" class="search-btn"> 🔎
+                        <i class="fas fa-search"></i>      
+                </a>
+              </div>
+
+              
+             
               
               {/* <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />; */}
               
