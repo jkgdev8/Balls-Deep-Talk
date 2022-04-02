@@ -36,8 +36,19 @@ body {
   background: #ffffff;
   opacity: 0.9;
   font-weight: bold;
-  
 
+  
+}
+@media screen and (max-width: 1140px) {
+  .ptag{
+    background-color: white;
+    opacity: 0.6;
+    display: flex;
+    object-Fit: "cover"; 
+    width: 100%;
+    transform: translateY(-100px)
+  
+  }
 }
 
 
@@ -84,6 +95,12 @@ body {
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
   transition: all 1s ease;
+}
+@media screen and (max-width: 1140px) {
+  .mainimage{
+    height: 100%;
+  
+  }
 }
 
 

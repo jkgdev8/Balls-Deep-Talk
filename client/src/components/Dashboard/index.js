@@ -32,9 +32,13 @@ class Dashboard extends Component {
         {images.map((each, index) => (
           <div key={index} style={{width: "auto" }}>
            <Link   to={each.title}> <img className="mainimage" style={{ objectFit: "cover", width: "100%" }} src={each.src} title={each.title}  alt=""/></Link>
-           <Link to={each.title}> <p className="ptag">{each.tag} </p></Link>
+           <div><Link to={each.title}> <p className="ptag" >{each.tag} </p></Link></div>
+
           </div>
+          
         ))}
+       
+        
       </Zoom>
     </div>
   )

@@ -18,7 +18,7 @@ Wanted to create an app where users can just simply make an account and join a â
 
 
 ### Live Site
-https://github.com/jkgdev8/FanTalk-Sports
+https://fantalksports.herokuapp.com/
 
 ### Tech used
 HTML, CSS, JavaScript, Mongodb, GraphQL, Node, React
