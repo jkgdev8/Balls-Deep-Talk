@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink} from './Nav';
-
 import Auth from '../../utils/auth';
 import h1 from './h1.svg';
-
-import Dropdown from 'react-dropdown';
+import './Sidebar.css';
 import 'react-dropdown/style.css';
+import Menu from '../Navbar/Menu.js';
+import Toggle from '../Navbar/Toggle.js';
 
 
 
@@ -14,7 +14,11 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
-  
+  const [navToggled, setNavToggled] = useState(false);
+
+  const handleNavToggle = () => {
+    setNavToggled(!navToggled);
+  }
   
   return (
     <>
@@ -22,7 +26,11 @@ const Header = () => {
         <NavLink to='/'>
           <img src={h1} alt='logo' height='180px' width='300px' color='none'/>
         </NavLink>
-        <Bars />
+        <Toggle handleNavToggle={handleNavToggle}/>
+     
+        { navToggled ? <Menu handleNavToggle={handleNavToggle} /> : null }
+        
+        
         <NavMenu>
         {Auth.loggedIn() ? (
             <>
@@ -35,17 +43,12 @@ const Header = () => {
                         <i class="fas fa-search"></i>      
                 </a>
               </div>
-
               
-             
               
-              {/* <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />; */}
+              
               
 
 
-              
-
-              
               <NavBtn>
               <NavBtnLink to='/logout' onClick={logout} >Log Out</NavBtnLink>
               </NavBtn>

@@ -33,6 +33,22 @@ export const NavLink = styled(Link)`
 
   }
 `;
+export const Menu = styled.nav`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  font-weight: bold;
+
+  &.active {
+    color: #ffbb00;
+    text-shadow: 2px 2px #000;
+
+  }
+`;
 
 export const Bars = styled(FaBars)`
   display: none;
@@ -48,6 +64,7 @@ export const Bars = styled(FaBars)`
     cursor: pointer;
   }
 `;
+
 
 export const NavMenu = styled.div`
   display: flex;

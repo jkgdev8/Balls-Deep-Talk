@@ -1,0 +1,86 @@
+.hamb {
+  background: #f0f0f0;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.hamb span i {
+  width: 50px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  left: 25%;
+}
+
+.span1 .span2 .span3 i {
+  position: absolute;
+}
+
+.hamb .spanf:nth-child(1) i {
+  top: 20%;
+}
+
+.hamb .spans:nth-child(2) i {
+  top: 40%;
+}
+
+.hamb .spant:nth-child(3) i {
+  top: 60%;
+}
+
+.span1:nth-child(1) i {
+  top: 40% !important;
+  transform: rotate(45deg);
+}
+
+.span2:nth-child(2) i {
+  left: 130px;
+}
+
+.span3:nth-child(3) i {
+  top: 40% !important;
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: relative;
+  left: -150px;
+  top: -17px;
+  transition: left 0.3s ease-in-out;
+}
+.menu ul {
+  list-style-type: none;
+  position: absolute;
+}
+.menu ul li {
+  font-size: 18pt;
+  background: #f0f0f0;
+  padding: 5px 10px;
+}
+.menu ul li:hover {
+  background: black;
+  color: white;
+}
+
+.active {
+  left: -40px;
+  top: -17px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
